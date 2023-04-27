@@ -30,27 +30,33 @@ for i in range(len(content_groups)):
             songs = song.split(', ')
             for k in songs:
                 if k[0] == '/':
-                    song_entry_list.append(k)
+                    song_entry_list.append(k.split('/wiki/')[1])
         except:
             print(j)
 
         if song[0] == '/':
-            song_entry_list.append(song)
+            song_entry_list.append(song.split('/wiki/')[1])
+
+link_list.append('/wiki/Category:Year_of_song_unknown')
+
     
-for i in range(2, len(song_entry_list)):
+for i in range(0, len(song_entry_list),2):
     try:
         link_list.append(song_entry_list[i].split('"')[0])
-        number = song_entry_list[i].split('" title="Category:')[1]
-        no_songs.append(int(number.split(' ')[0]))
     except:
         print(song_entry_list[i])
 
-#print(len(link_list))
+last_number = 0
+try:
+    last_number = song_entry_list[i].split('" title="Category:')[1]
+    last_number = int(last_number.split(' ')[0])
+except:
+    last_number = 1971
 
+for i in range(last_number, 2023):
+    link = 'Category:' + str(i) + '_songs'
+    link_list.append(link)
 
-#print(x.text)
-#looping through the iterator:
-#for c in x.iter_lines():
-  #print(str(c))
+print(link_list[48])
 
     
