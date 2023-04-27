@@ -1,6 +1,8 @@
 url = 'https://en.wikipedia.org/wiki/Category:Songs_by_year'
 
 import requests
+import wikipediaapi
+#pip install wikipedia-api
 
 
 wiki = requests.get(url).text
@@ -58,5 +60,17 @@ for i in range(last_number, 2023):
     link_list.append(link)
 
 print(link_list[48])
+
+wiki = wikipediaapi.Wikipedia('en')
+cat = wiki.page(link_list[48])
+for p in cat.categorymembers.values():
+  if p.namespace == wikipediaapi.Namespace.CATEGORY:
+    # it is category, so you have to make decision
+    # if you want to fetch also text from pages that belong
+    # to this category
+    print(p)
+  elif p.namespace == wikipediaapi.Namespace.MAIN:
+    # it is page => we can get text
+    print(p)
 
     
