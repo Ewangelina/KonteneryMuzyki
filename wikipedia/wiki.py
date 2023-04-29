@@ -13,9 +13,9 @@ for p in cat.categorymembers.values():
   if p.namespace == wikipediaapi.Namespace.CATEGORY:
     name = str(p)
     name = name.split(" (id:")[0]
-    print(name)
-    print(len(p.categorymembers))
-    print('')
+    #print(name)
+    #print(len(p.categorymembers))
+    #print('')
   elif p.namespace == wikipediaapi.Namespace.MAIN:
     print(p)
 
