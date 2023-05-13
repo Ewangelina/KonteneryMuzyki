@@ -18,11 +18,14 @@ docker container ls
 lists all running containers
 
 docker ps -a <-lists all running containers
+docker inspect _ <- można znaleźć ip _ to id kontenera wzięte po ps
 
 
 
 docker network create wiki-database
 when starting add --net wiki-database
+docker network ls
+wypisz wszystkie sieci
 
 
 
