@@ -16,12 +16,13 @@ def get_url():
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
-    data = s.recv(1024)
-    print(data)
-    if data == str.encode("request"):
-        url = get_url()
-        print(url)
-        s.sendall(str.encode(url)) #turn to bytes
+    while (True):
+        data = s.recv(1024)
+        if data == str.encode("request"):
+            url = get_url()
+            s.sendall(str.encode(url)) #turn to bytes
+        if data == str.encode("quit"):
+            break
    
 
 
