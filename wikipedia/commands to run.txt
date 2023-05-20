@@ -1,6 +1,0 @@
-in cmd
-
-docker build -t wiki ./
-wiki tutaj to nazwa(dowolna)
-
-docker run wiki
