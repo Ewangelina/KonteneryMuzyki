@@ -1,0 +1,35 @@
+in cmd
+
+docker build -t wiki ./
+wiki tutaj to nazwa(dowolna)
+other is sham
+
+docker run wiki
+
+docker stop wiki
+docker rm wiki <-docker remove
+
+docker exec -it wiki bash <- docker execute interactive terminal
+
+
+docker images 
+lists all images
+docker container ls
+lists all running containers
+
+docker ps <-lists all running containers
+docker inspect _ <- można znaleźć ip _ to id kontenera wzięte po ps
+
+
+
+docker network create wiki-database
+when starting add --net wiki-database
+docker network ls
+wypisz wszystkie sieci
+
+docker network create music <- tworzy sieć
+--net music <- dodawać do run
+
+docker run --network=music con
+
+
