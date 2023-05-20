@@ -9,8 +9,9 @@ docker run wiki
 docker stop wiki
 docker rm wiki <-docker remove
 
-docker exec -it wiki bash <- docker execute interactive terminal
-
+docker container run --name out_con -p 8080:7777 con
+port 7777 kontenera to 8080 komputera
+docker rm out_con
 
 docker images 
 lists all images
