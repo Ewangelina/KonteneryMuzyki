@@ -12,10 +12,13 @@ HOST_PORT = 7777  # The port used by the server
 
 def find_song(mycol):
   num = random.randrange(0, top_value)
+  print(num)
   collection = mycol.find({ "value": { "$lte": num } }).sort("value",-1).limit(1) # for MAX
   for row in collection:
     num = num - row["value"]
+    print(num)
     category = row["name"].replace('"','')
+    print(category)
 
     wiki = wikipediaapi.Wikipedia('en')
     song_list = wiki.page(category)
@@ -26,9 +29,9 @@ def find_song(mycol):
           page = wiki.page(str(song).split('(')[0])
           url = "https://en.wikipedia.org/?curid=" + str(page.pageid)
           print(url)
-          return
+          return url
         else:
-          find_song(mycol)
+          return find_song(mycol)
       index = index + 1
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -66,6 +69,8 @@ try:
   while (True):
     data = s.recv(1024)
     if data == str.encode("request"):
+      print("Got request")
+
       url = find_song(mycol)
       s.sendall(str.encode(url)) #turn to bytes
     if data == str.encode("quit"):

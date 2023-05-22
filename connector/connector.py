@@ -8,10 +8,13 @@ s.close()
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
   server_socket.bind((HOST,IN_PORT))
   server_socket.listen()
+  print("Wait for shazam")
   shazam_connection, shazam_addr = server_socket.accept()
+  print("Wait for wikipedia")
   wikipedia_connection, wikipedia_addr = server_socket.accept()
-
+  print("Wait for ui")
   outside_connection, outside_addr = server_socket.accept()
+  print("FULLY CONNECTED")
 
   while(True):
     data = outside_connection.recv(1024)
@@ -21,7 +24,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
     
     if data == str.encode("request"):
       num = random.randrange(1, 3)
-      if num == 1:
+      if num == 99999:
         shazam_connection.sendall(str.encode("request"))
         url = shazam_connection.recv(1024)
         outside_connection.sendall(url)
