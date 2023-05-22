@@ -1,4 +1,5 @@
 import socket
+import random
 IN_PORT = 7777  # Port to listen on (non-privileged ports are > 1023)
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.connect(("8.8.8.8", 80))
@@ -8,6 +9,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
   server_socket.bind((HOST,IN_PORT))
   server_socket.listen()
   shazam_connection, shazam_addr = server_socket.accept()
+  wikipedia_connection, wikipedia_addr = server_socket.accept()
 
   outside_connection, outside_addr = server_socket.accept()
 
@@ -18,9 +20,15 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
       break
     
     if data == str.encode("request"):
-      shazam_connection.sendall(str.encode("request"))
-      url = shazam_connection.recv(1024)
-      outside_connection.sendall(url)
+      num = random.randrange(1, 3)
+      if num == 1:
+        shazam_connection.sendall(str.encode("request"))
+        url = shazam_connection.recv(1024)
+        outside_connection.sendall(url)
+      else:
+        wikipedia_connection.sendall(str.encode("request"))
+        url = wikipedia_connection.recv(1024)
+        outside_connection.sendall(url)
 
 
   server_socket.close()

@@ -5,6 +5,10 @@ import requests
 import wikipediaapi
 from pymongo import MongoClient, errors
 import random
+import socket
+
+HOST = "172.17.0.2"  # The server's hostname or IP address
+HOST_PORT = 7777  # The port used by the server
 
 def find_song(mycol):
   num = random.randrange(0, top_value)
@@ -27,12 +31,16 @@ def find_song(mycol):
           find_song(mycol)
       index = index + 1
 
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((HOST, HOST_PORT))
+
+
 #https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Songs_by_year&cmtype=subcat
 wiki = wikipediaapi.Wikipedia('en')
 cat = wiki.page('Category:Songs_by_year')
 
 # global variables for MongoDB host (default port is 27017)
-DOMAIN = '172.17.0.2'
+DOMAIN = '172.17.0.4'
 PORT = 27017
 
 # use a try-except indentation to catch MongoClient() errors
@@ -55,9 +63,13 @@ try:
       top_value = top_value + len(p.categorymembers)
       break
 
-  find_song(mycol)
-
-
+  while (True):
+    data = s.recv(1024)
+    if data == str.encode("request"):
+      url = find_song(mycol)
+      s.sendall(str.encode(url)) #turn to bytes
+    if data == str.encode("quit"):
+      break
 except errors.ServerSelectionTimeoutError as err:
   # set the client and DB name list to 'None' and `[]` if exception
   client = None
@@ -65,7 +77,5 @@ except errors.ServerSelectionTimeoutError as err:
 
   # catch pymongo.errors.ServerSelectionTimeoutError
   print ("pymongo ERROR:", err)
-except KeyboardInterrupt:
-  print("user exit")
 
     

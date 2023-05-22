@@ -1,0 +1,14 @@
+docker build -t con ./connector
+docker build -t sham ./shazam
+docker build -t mongo ./database
+docker build -t wiki ./wikipedia
+docker container run -d -p 8080:7777 con
+docker run -d sham
+docker run -d mongo
+docker run -d wiki
+
+
+
+
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
