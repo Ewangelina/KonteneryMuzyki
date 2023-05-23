@@ -24,7 +24,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
     
     if data == str.encode("request"):
       num = random.randrange(1, 3)
-      if num == 99999:
+      if num == 1:
         shazam_connection.sendall(str.encode("request"))
         url = shazam_connection.recv(1024)
         outside_connection.sendall(url)

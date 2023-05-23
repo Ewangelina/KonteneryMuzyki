@@ -13,7 +13,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     		break
     	s.sendall(str.encode("request"))
     	data = s.recv(1024)
-    	print(str(data))
+    	print("".join(map(chr, data)))
     	
    
 
