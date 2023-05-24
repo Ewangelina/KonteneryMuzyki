@@ -1,9 +1,93 @@
-<mxfile host="app.diagrams.net" modified="2023-05-24T14:27:41.556Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0" version="21.3.3" etag="cLc_uphtRjYkgJdCdKFg" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-24T14:45:52.019Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0" etag="LDCqAMBr74n4I2e83N16" version="21.3.3" type="github">
   <diagram name="Strona-1" id="lyWJhbYXJo5zKNZWTuPd">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="739" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-1" value="User" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-2" value="&lt;div&gt;Choosing source&lt;/div&gt;&lt;div&gt;(wikipedia)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="150" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-7" value="Song request" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TUqoRGzYjxkEWvZzCTPw-1" target="TUqoRGzYjxkEWvZzCTPw-2">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="116" y="520" as="sourcePoint" />
+            <mxPoint x="196" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-8" value="Generating random number from a range" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="150" y="410" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-9" value="Song request" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="TUqoRGzYjxkEWvZzCTPw-8" source="TUqoRGzYjxkEWvZzCTPw-2">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="190" y="320" as="sourcePoint" />
+            <mxPoint x="196" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-10" value="Choosing song" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="150" y="690" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-12" value="Category name" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0.488;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="TUqoRGzYjxkEWvZzCTPw-17" target="TUqoRGzYjxkEWvZzCTPw-10">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="189.5" y="600" as="sourcePoint" />
+            <mxPoint x="189.5" y="686" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-14" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="1">
+          <mxGeometry x="110" y="560" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-15" value="Random number" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TUqoRGzYjxkEWvZzCTPw-8" target="TUqoRGzYjxkEWvZzCTPw-16">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="320" y="660" as="sourcePoint" />
+            <mxPoint x="190" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-16" value="Database of categories" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="570" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-17" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="1">
+          <mxGeometry x="110" y="600" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-20" value="Song URL" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TUqoRGzYjxkEWvZzCTPw-10" target="TUqoRGzYjxkEWvZzCTPw-1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="412" y="660" as="sourcePoint" />
+            <mxPoint x="414" y="746" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-21" value="User" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-22" value="&lt;div&gt;Choosing source&lt;/div&gt;&lt;div&gt;(shazam)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="590" y="250" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-23" value="Song request" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TUqoRGzYjxkEWvZzCTPw-21" target="TUqoRGzYjxkEWvZzCTPw-22">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="556" y="530" as="sourcePoint" />
+            <mxPoint x="636" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-25" value="Song request" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TUqoRGzYjxkEWvZzCTPw-22" target="TUqoRGzYjxkEWvZzCTPw-26">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="630" y="330" as="sourcePoint" />
+            <mxPoint x="630" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-26" value="Choosing song" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="590" y="430" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TUqoRGzYjxkEWvZzCTPw-32" value="Song URL" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TUqoRGzYjxkEWvZzCTPw-26" target="TUqoRGzYjxkEWvZzCTPw-21">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="852" y="670" as="sourcePoint" />
+            <mxPoint x="854" y="756" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="730" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
