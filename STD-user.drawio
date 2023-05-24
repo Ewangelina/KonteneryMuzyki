@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-24T14:25:58.515Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0" etag="Ne3R-gTGmTycExHwxrDN" version="21.3.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-24T14:26:57.058Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0" etag="UATiItfIwX_9bbvz50ue" version="21.3.3" type="github">
   <diagram name="Strona-1" id="VtrbDFPd5q9PhZEtTbry">
     <mxGraphModel dx="989" dy="539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -24,7 +24,7 @@
             <mxPoint x="494" y="325" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7bphNffgXHVLwuXxrw4F-6" value="Randomly choose source (wikipedia or shazam)" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+        <mxCell id="7bphNffgXHVLwuXxrw4F-6" value="Randomly choosing source (wikipedia or shazam)" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="294" y="295" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7bphNffgXHVLwuXxrw4F-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ghIzWxrolaCGQlfThOXV-5" target="7bphNffgXHVLwuXxrw4F-2" edge="1">
@@ -47,13 +47,13 @@
         <mxCell id="ghIzWxrolaCGQlfThOXV-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ghIzWxrolaCGQlfThOXV-1" target="ghIzWxrolaCGQlfThOXV-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ghIzWxrolaCGQlfThOXV-1" value="Retrieve random song link" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="ghIzWxrolaCGQlfThOXV-1" value="Generating random song link" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="500" y="295" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ghIzWxrolaCGQlfThOXV-4" value="Request a song" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="430" y="295" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ghIzWxrolaCGQlfThOXV-5" value="Pass on the URL to the user" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="ghIzWxrolaCGQlfThOXV-5" value="Passing on the URL to the user" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="640" y="155" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ghIzWxrolaCGQlfThOXV-7" value="return song URL" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
