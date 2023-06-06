@@ -63,7 +63,7 @@ try:
       mycol.insert_one(row)
       print(len(p.categorymembers))
       top_value = top_value + len(p.categorymembers)
-      break
+      
 
   while (True):
     data = s.recv(1024)
