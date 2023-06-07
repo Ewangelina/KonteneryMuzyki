@@ -20,6 +20,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
     data = outside_connection.recv(1024)
     if data == str.encode("quit"):
       shazam_connection.sendall(str.encode("quit"))
+      wikipedia_connection.sendall(str.encode("quit"))
       break
     
     if data == str.encode("request"):
